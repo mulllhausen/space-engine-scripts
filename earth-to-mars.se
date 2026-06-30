@@ -1,21 +1,22 @@
 // A simple flight from Earth to Mars
 // run "addons/scenario-scripts/earth-to-mars.se"
-// https://spaceengine.org/manual/making-addons/scenario-scripts/
 
-// Step 1: Select and fly to Earth
+// pick a specific time so the rendered result is repeatable
+Date "3000"
+StopTime
+
 Select "Earth"
-Goto { Time 5.0 }
-Wait 5.0
+Goto   { Time 5.0 }
+Wait   5.0
 
-// Step 2: Select and fly to Mars
+Orbit  { AngularSpeed 18.0 }   // 18 deg/s x 20s = one full revolution
+Wait   20.0
+StopOrbit
+
 Select "Mars"
-Goto { Time 5.0 }
-Wait  10.0
+Goto   { Time 10.0 }
+Wait   10.0
 
-// Step 3: Rotate the camera view (pitch, yaw, roll) for 4 seconds
-//Turn   (0.0, 45.0, 0.0) 4.0
-// note: TurnStop is an unknown command
-// Turn   (0.0, 0.0, 0.0) 1.0
-// note: SetOrientation (0, 0, 0) is an unknown command
-//Wait  2.0
-Break
+Turn   { AngularSpeed 11.25 Axis (0, 1, 0) }
+Wait   4.0
+StopTurn
