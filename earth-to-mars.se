@@ -1,22 +1,51 @@
 // A simple flight from Earth to Mars
 // run "addons/scenario-scripts/earth-to-mars.se"
 
-// pick a specific time so the rendered result is repeatable
-Date "3000"
+// Freeze simulation time at 1 January 3000
+Date    "3000"
 StopTime
+//Hide    Labels
+Show    Labels
 
-Select "Earth"
-Goto   { Time 5.0 }
-Wait   5.0
+// Step 1: Fly close to Earth over the equator. Pitch down so the horizon
+// sits mid-screen, and yaw 90 degrees so the camera faces along the orbit path
+Select  "Earth"
+Goto    { Time 1.0 HeightKm 2000 Lat 0 Pitch -45 Yaw 90 }
+Wait    2.0
 
-Orbit  { AngularSpeed 18.0 }   // 18 deg/s x 20s = one full revolution
-Wait   20.0
-StopOrbit
+// Step 2: Orbit Earth along the equator for 20 seconds (polar-axis orbit)
+Orbit   { AngularSpeed 9.0 }
+Wait    15.0
 
-Select "Mars"
-Goto   { Time 10.0 }
-Wait   10.0
+// peel off orbit toward Mars
+// Stop orbiting, start flying forward (tangent), and turn to face Mars simultaneously
+//StopOrbit { FadeTime 3.0 }
+Select  "Mars"
+Fly
+{
+    SpeedKm 2000
+    //FadeTime  2
+}
+Wait    2.0
+Center  { Time 5.0 }
 
-Turn   { AngularSpeed 11.25 Axis (0, 1, 0) }
-Wait   4.0
-StopTurn
+Print "HEADING TO MARS"
+{
+    Time 10.0
+    PosX 0.5
+    PosY 0.75
+    AlignX "center"
+    AlignY "center"
+    Color (1.0, 0.6, 0.2, 1.0)
+}
+
+Wait    5.0
+//StopFly
+
+Goto    { Time 10.0 }
+Wait    10.0
+
+// Step 4: Yaw the camera 45 degrees over 4 seconds, then stop
+//Turn    { AngularSpeed 11.25 Axis (0, 1, 0) }
+//Wait    4.0
+//StopTurn
