@@ -13,31 +13,30 @@ Select  "Earth"
 Goto    { Time 1.0 HeightKm 2000 Lat 0 Pitch -45 Yaw 90 }
 Wait    2.0
 
-// Step 2: Orbit Earth along the equator for 20 seconds (polar-axis orbit)
+// Orbit Earth along the equator
 Orbit   { AngularSpeed 9.0 }
-Wait    15.0
+Wait    10.0
 
 // peel off orbit toward Mars
 // Stop orbiting, start flying forward (tangent), and turn to face Mars simultaneously
 //StopOrbit { FadeTime 3.0 }
+Print "Destination: Mars"
+{
+    Time 20.0
+    PosX 0.4
+    PosY 0.6
+    AlignX "center"
+    AlignY "center"
+    Color (0.0, 1.0, 0.0, 1.0)
+}
 Select  "Mars"
 Fly
 {
     SpeedKm 2000
-    //FadeTime  2
+    //FadeTime  2 // get rid of this to prevent coming to a stop before starting the next action
 }
 Wait    2.0
 Center  { Time 5.0 }
-
-Print "HEADING TO MARS"
-{
-    Time 10.0
-    PosX 0.5
-    PosY 0.75
-    AlignX "center"
-    AlignY "center"
-    Color (1.0, 0.6, 0.2, 1.0)
-}
 
 Wait    5.0
 //StopFly
@@ -49,3 +48,4 @@ Wait    10.0
 //Turn    { AngularSpeed 11.25 Axis (0, 1, 0) }
 //Wait    4.0
 //StopTurn
+Break
