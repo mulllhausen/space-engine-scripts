@@ -1,0 +1,11 @@
+Date    "3000"
+StopTime
+
+Select "RS 0-1-3-1882-4073-7-1905343-439 AA"
+Track
+
+Goto    { DistKm 100000 Time 20.0 }
+Wait    20.0
+// Orbit   { AngularSpeed -9.0 }
+
+Break

@@ -1,3 +1,6 @@
+Date    "3000"
+StopTime
+
 GotoLocation "dune sunrise"
 {
 	Ver		991
@@ -19,20 +22,37 @@ Track
 Wait 5.0
 
 // fly upward directly up to 250km while still looking at the suns for 10 seconds
+// note: accel = time/2
 Select "RS 0-1-3-1882-4073-7-1905343-439 2.1"
-Goto    { Time 50.0 HeightKm 500 }
-Wait    10.0
+Goto    { HeightKm 250 Time 60.0 DecelTime 0.0 }
+Wait    15.0
 
 // look back down at the center of the planet while still flying up (takes 10 seconds)
 Untrack
 Center  { Time 10.0 }
-Wait    20.0
+Wait    10.0
 
-Goto    { Time 30.0 HeightKm 500 Pitch -45 Yaw -90 }
-Wait    20.0
+// turn to look up at the horizon while gaining height
+Goto    { HeightKm 300 Pitch -45 Yaw -90 AccelTime 0.0 DriftTime 9.0 DecelTime 0.0 }
+Wait    9.0
 
-// Orbit the planet - negative speed to orbit in the forward direction
-Orbit   { AngularSpeed -2.0 }
-Wait    40.0
+Orbit   { AngularSpeed -9.0 }
+Wait    36.5
+
+GotoLocation    "02-end"
+{
+	Ver		991
+	Body	"RS 0-1-3-1882-4073-7-1905343-439 2.1"
+	Parent	"RS 0-1-3-1882-4073-7-1905343-439 2-2.1"
+	Date	"3000.01.01 00:00:00.00"
+	Time	+2AFB1380379A13E280CBD9EA90
+	Pos		(+D0D75E2F80A83D406B9B971EE7B5 -2168A1C1921C0F613FE52E9A0D6B -F5192437D97B1BD51BFF90DAE95)
+	Rot		(0.5196266014725854 0.01877971886246264 0.4283096245195621 -0.7390442359868653)
+	Vel		3.2407792e-15
+	Stereobase	1
+	BindMode	1
+	PhotoMode	0
+	Exposure	0
+}
 
 Break
