@@ -19,4 +19,4 @@ Center  { Time 0.0 }
 Wait    2.0
 Goto    { Time 6.0 }
 Wait    6.0
-Break
+//Break
