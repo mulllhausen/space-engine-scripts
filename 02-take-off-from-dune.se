@@ -1,0 +1,38 @@
+GotoLocation "dune sunrise"
+{
+	Ver		991
+	Body	"RS 0-1-3-1882-4073-7-1905343-439 2.1"
+	Parent	"RS 0-1-3-1882-4073-7-1905343-439 2-2.1"
+	Date	"3000.01.01 00:00:00.00"
+	Time	+2AFB1380000000000000000000
+	Pos		(+D0D75E2F80A83D40636AB3C6EA4A -2168A1C1921C0F6128231AEB703B -F5192437D97B1BD6772E70112E3)
+	Rot		(-0.5262552663052097 -0.1008948410971622 -0.4561629723955755 0.710486430793189)
+	Vel		3.2407792e-15
+	Stereobase	1
+	BindMode	2
+	PhotoMode	0
+	Exposure	0
+}
+// our binary suns
+Select "RS 0-1-3-1882-4073-7-1905343-439 AA"
+Track
+Wait 5.0
+
+// fly upward directly up to 250km while still looking at the suns for 10 seconds
+Select "RS 0-1-3-1882-4073-7-1905343-439 2.1"
+Goto    { Time 50.0 HeightKm 500 }
+Wait    10.0
+
+// look back down at the center of the planet while still flying up (takes 10 seconds)
+Untrack
+Center  { Time 10.0 }
+Wait    20.0
+
+Goto    { Time 30.0 HeightKm 500 Pitch -45 Yaw -90 }
+Wait    20.0
+
+// Orbit the planet - negative speed to orbit in the forward direction
+Orbit   { AngularSpeed -2.0 }
+Wait    40.0
+
+Break

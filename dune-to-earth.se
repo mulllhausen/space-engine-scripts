@@ -8,12 +8,18 @@
 // IC 1101  is 1.18Gly from earth
 // black hole RS 10445-61345-0-0-503 B
 // RG 0-1-3-1882 is 11.6Gly from earth
+// microquasar SS 433
 
+// dune/arakas = "RS 0-1-3-1882-4073-7-1905343-439 2.1"
+
+/////////////////////////////////////////////////
+// synopsys
+/////////////////////////////////////////////////
 // astral projection	0 - 8:00	shots of harvesters on arakas, low orbit of arakas, looking towards the sun, flying among the mountains of arakas
 // planisphere	8:00 - 12:00	going into orbit around arakas, tilt around while in orbit and look out into space "RS 0-1-3-1882-4073-7-1905343-439 2.1"
-// zyon	16:00 - 17:30	head for the black hole (we're going to use it for a gravity boost
+// zyon	16:00 - 17:30	head for the black hole (we're going to use it for a gravity boost)
 // inflextion	17:30 - 20:00	we hit the black hole, now we're going fast in the rough direction of earth accelerating past galaxies at around 10,000c
-// learning to fly	20:00 - 29:30	fly above the rings of J1407b
+// learning to fly	20:00 - 29:30	fly above the rings of J1407b or se://v=991&n=pliadies%20planet%20with%20rings&b=HD%2023479%206%2E1&p=HD%2023479%206&t=+1A42E7EFF1C1D37C100D936928&x=+6737348A8EEFED1A25F726&y=+378EF3586F33BC12514B68&z=+4424EF9DA40411343ED3CD&qx=0.7569663&qy=-0.3201617&qz=-0.4525699&qw=-0.3459464&u=2.5281e-11&m=1&s=1&f=0&e=0
 // angel	29:30 - 40:00	nebula
 // hallucinogen & clanger	40:00 - 45:00	head slowly towards a neutron star with planets and another star orbiting it
 // netherworld	45:00 - 50:30	in an intergalactic void, heading towards a black hole
@@ -29,3 +35,56 @@
 // symmetry	2:25:00 - 2:37:00	navigating the orion arm towards earth
 // orkedia	2:37:00 - 2:43:00	our solar system
 // vibrasphere	2:43:00 - end	orbiting earth
+
+/////////////////////////////////////////////////
+// script starts here
+/////////////////////////////////////////////////
+
+// Freeze simulation time at 1 January 3000
+Date    "3000"
+StopTime
+Hide    Labels
+//Show    Labels
+Hide PlanetShine
+
+/////////////////////////////////////////////////
+// astral projection	0 - 8:00
+/////////////////////////////////////////////////
+
+
+// insert videos of dune here
+// and stock footage of flying over a desert
+
+// mars desert in utah
+// https://www.youtube.com/watch?v=DKd9cC9aJhU
+
+// sahara - not stock but good for ideas
+// https://www.youtube.com/watch?v=uD0ww8E0Za8
+
+// free and royalty free
+// https://www.pexels.com/search/videos/desert/
+// https://www.pexels.com/video/person-walking-on-desert-6573935
+
+/////////////////////////////////////////////////
+// astral projection	0 - 8:00
+/////////////////////////////////////////////////
+
+
+
+// Set MotionBlurLength to something like 3.0–5.0 for the streak effect
+//Place	"pliadies planet with rings"
+//{
+//	Ver		991
+//	Body	"HD 23479 6.1"
+//	Parent	"HD 23479 6"
+//	Date	"   0.01.07 10:29:41.22"
+//	Time	+1A42E7EFF1C1D37C100D936928
+//	Pos		(+6737348A8EEFED1A25F726 +378EF3586F33BC12514B68 +4424EF9DA40411343ED3CD)
+//	Rot		(-0.3459463707602351 0.756966332560001 -0.3201617322844945 -0.4525699339428942)
+//	Vel		2.5281468e-11
+//	Stereobase	1
+//	BindMode	1
+//	PhotoMode	0
+//	Exposure	0
+//}
+
