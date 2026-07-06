@@ -44,11 +44,10 @@
 Date    "3000"
 StopTime
 Hide    Labels
-//Show    Labels
 Hide PlanetShine
 
 // astral projection	0 - 8:00
-Run "addons/scenario-scripts/01-zoom-to-dune.se"
+//Run "addons/scenario-scripts/010-zoom-to-dune.se"
 
 // insert videos of dune here
 // and stock footage of flying over a desert
@@ -63,8 +62,8 @@ Run "addons/scenario-scripts/01-zoom-to-dune.se"
 // https://www.pexels.com/search/videos/desert/
 // https://www.pexels.com/video/person-walking-on-desert-6573935
 
-Run "addons/scenario-scripts/02-take-off-from-dune.se"
-Run "addons/scenario-scripts/03-go-to-dune-suns.se"
+Run "addons/scenario-scripts/020-take-off-from-dune.se"
+Run "addons/scenario-scripts/030-go-to-dune-suns.se"
 
 // Set MotionBlurLength to something like 3.0–5.0 for the streak effect
 //Place	"pliadies planet with rings"

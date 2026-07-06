@@ -15,8 +15,8 @@ GotoLocation "dune"
 }
 
 select "RS 0-1-3-1882-4073-7-1905343-439 2.1"
+Follow
 Center  { Time 0.0 }
-Wait    2.0
-Goto    { Time 6.0 }
-Wait    6.0
-//Break
+Goto    { Time 20.0 }
+Wait    20.0
+Break
