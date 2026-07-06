@@ -28,56 +28,18 @@ Orbit   { AngularSpeed -9.0 }
 Fly     { SpeedKm 500 Axis (0, -1, 1) }
 Wait    2.0
 
-// look up to get the planet out of view
-Turn    { AngularSpeed 45.0 Axis (1, 0, 0) }
-StopTurn
-
-// one of dune's 3 suns
+// one of dune's 5? suns
 Select "RS 0-1-3-1882-4073-7-1905343-439 AA"
+Follow
 
-// now nothing nearby is in frame we can
-// center the selection while stopped
-Center  { Time 2.0 }
-Wait    2.1
+// now nothing nearby is in frame we can center the selection while stopped
+Center  { Time 10.0 }
+Wait    10.0
 Track
 
-Hide    Labels
-
-//Waypoint  "past dune suns"
-//{
-//	Ver		991
-//	Body	"RS 0-1-3-1882-4073-7-1905343-439 AA"
-//	Parent	"RS 0-1-3-1882-4073-7-1905343-439 A"
-//	Date	"3000.01.01 00:02:38.97"
-//	Time	+2AFB13807895D8D046B55241B0
-//	Pos		(+D0D75E2F8042193AE3C5A241BC8A -2168A1C190240A29301E715A30D3 -F5192437F8539B35E85601956FA)
-//	Rot		(-0.54072919175636 -0.03793486977601469 -0.3214176826679176 0.7764428891463792)
-//	Vel		5.1362887e-05
-//	Stereobase	1
-//	BindMode	1
-//	PhotoMode	0
-//	Exposure	0
-//	Visible false
-//}
-Waypoint	"way past dune suns"
-{
-	Ver		991
-	Body	"RS 0-1-3-1882-4073-7-1905343-439 AA"
-	Parent	"RS 0-1-3-1882-4073-7-1905343-439 A"
-	Date	"3000.01.01 00:02:38.97"
-	Time	+2AFB13807895D8D046B55241B0
-	Pos		(+D0D75E2F7943C7D095577A11E7DC -2168A1C1830E4D5DE0BD8E2CDB5B -F51924392AB871F903366073ED9)
-	Rot		(-0.54072919175636 -0.03793486977601469 -0.3214176826679176 0.7764428891463792)
-	Vel		0.081404693
-	Stereobase	1
-	BindMode	1
-	PhotoMode	0
-	Exposure	0
-    Visible false
-}
-
-Select "way past dune suns"
-Goto    { Dist 0.0 Time 20.0 }
-Wait    41.0
+// one of dune's futher away stars
+Select "RS 0-1-3-1882-4073-7-1905343-439 BBA"
+Goto    { Time 40.0 }
+Wait    40.0
 
 Break
