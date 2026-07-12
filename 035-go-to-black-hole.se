@@ -1,0 +1,57 @@
+// giving up on this for now. its too hard to figure out the coordinates
+// and rotations
+Break
+
+
+// found a black hole more or less in view via the star browser
+// we will use the nearby suns to swing into the correct direction and
+// gain speed
+
+Date    "3000"
+StopTime
+Hide    Labels
+
+Set MotionBlurLength 0.0
+
+GotoLocation "end of 031"
+{
+	Ver		991
+	Body	"RS 0-1-3-1882-4073-7-1905343-439 2"
+	Parent	"RS 0-1-3-1882-4073-7-1905343-439 2-2.1"
+	Date	"3000.01.01 00:02:53.77"
+	Time	+2AFB138083CFEBDF17D591C970
+	Pos		(+D0D75E2F804906DB2AAA657C9311 -2168A1C19030A02BD6281A124420 -F5192437F72D0D8B8C407C994B2)
+	Rot		(-0.1334588722238054 0.01024160094445062 -0.3939206097827961 0.9093461344412231)
+	Vel		2.3628778e-05
+	Stereobase	1
+	BindMode	1
+	PhotoMode	0
+	Exposure	0
+}
+
+// a star in the distance in the middle of BBA (top) and BA (bottom)
+//Select "RS 0-1-3-1882-4073-2-57-1319"
+Select "RS 0-1-3-1882-4073-1-5-17"
+Center { Time 10.0 }
+Wait    10.0
+
+Goto    { Time 170.0 }
+Wait    19.6
+
+GotoLocation	"binary stars 1"
+{
+	Ver		991
+	Body	"RS 0-1-3-1882-4073-1-5-17"
+	Parent	""
+	Date	"3000.01.01 00:03:09.47"
+	Time	+2AFB13808FB8BB1F8296AF6E90
+	Pos		(+D0D75E2F80457E7720D59A4DAE5D -2168A1C19018D34C34E8A709890D -F5192437F8608FAE9BD928BA64D)
+	Rot		(-0.1271574878123247 0.002505114773144347 -0.4335193583526877 0.8921242422592863)
+	Vel		2.3628778e-05
+	Stereobase	1
+	BindMode	1
+	PhotoMode	0
+	Exposure	0
+}
+
+Break
