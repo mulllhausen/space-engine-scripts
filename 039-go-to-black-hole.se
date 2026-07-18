@@ -24,7 +24,17 @@ GotoLocation " black hole 1"
 // black hole
 Select "RS 0-1-3-1882-4073-8-15244520-482"
 
-// fly directly into the black hole
-Fly     { SpeedKm 500 Axis (0, 0, 1) }
-Wait 65
+// fly directly into the black hole at a constant speed
+//Fly     { SpeedKm 500 Axis (0, 0, 1) }
+
+// comment one of these out at a time:
+
+// a quick version to use the first half of
+//Goto { Time 20 DistKm -1 }
+//Wait 20
+
+// a slow version to use the second half of
+Goto { Time 100 DistKm -1 }
+Wait 110
+
 Break
