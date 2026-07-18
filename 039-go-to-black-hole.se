@@ -19,8 +19,12 @@ GotoLocation " black hole 1"
 	PhotoMode	0
 	Exposure	0
 }
+//Break
 
 // black hole
 Select "RS 0-1-3-1882-4073-8-15244520-482"
 
-Goto { Time 20  DistKm 0 }
+// fly directly into the black hole
+Fly     { SpeedKm 500 Axis (0, 0, 1) }
+Wait 65
+Break

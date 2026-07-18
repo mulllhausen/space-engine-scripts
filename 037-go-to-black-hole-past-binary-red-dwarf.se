@@ -1,3 +1,4 @@
+// need approx 1 min more footage looking back
 Date    "3000"
 StopTime
 Hide    Labels
@@ -30,6 +31,6 @@ Track
 // black hole
 Select "RS 0-1-3-1882-4073-8-15244520-482"
 
-Goto { Time 200 DistKm 30000 }
-Wait 150
+Goto { Time 300 DistKm 30000 }
+Wait 300
 Break
