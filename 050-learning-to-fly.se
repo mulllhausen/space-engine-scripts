@@ -1,0 +1,85 @@
+// start 22:30, end 28:08 = 7:40 mins = 460 seconds
+
+Date    "3000"
+StopTime
+Hide    Labels
+
+// just use this waypoint for a start location
+GotoLocation	"going to angel"
+{
+	Ver		991
+	Body	"RS 8513-507-8-11961030-467 4"
+	Parent	"RS 8513-507-8-11961030-467"
+	Date	"2017.01.08 22:56:05.04"
+	Time	+2580A274A31E2EB781F3D7BED4
+	Pos		(+4B033BAFBC0531365A10B15DB7E +2278B8370AEC645DEDBEC6F6A855 -6FF3EAA3E7B061E540761B9ACA4)
+	Rot		(-0.03279523888577823 0.1438121326588103 0.7602018001088364 0.6327209226174163)
+	Vel		7943282.5
+	Stereobase	1
+	BindMode	1
+	PhotoMode	0
+	Exposure	0
+}
+
+Fly     { Speed 1000000 Axis (0, 0, 1) }
+Wait 1
+
+// barrell roll anticlockwise
+Turn { AngularSpeed 10 Axis (0, 0, 1) FadeTime 10 }
+Wait 30
+
+// barrell roll clockwise
+Turn { AngularSpeed 10 Axis (0, 0, -1) FadeTime 10 }
+Wait 30
+
+// turn left
+Turn { AngularSpeed 1 Axis (0, 1, 0) FadeTime 10 }
+Wait 30
+
+// turn right
+Turn { AngularSpeed 1 Axis (0, -1, 0) FadeTime 10 }
+Wait 30
+
+// pitch up
+//Turn { AngularSpeed 1 Axis (1, 0, 0) FadeTime 0 }
+
+// helix
+Turn { AngularSpeed 1 Axis (1, 1, 1) FadeTime 10 }
+Wait 30
+
+// helix
+Turn { AngularSpeed 1 Axis (1, -1, 1) FadeTime 10 }
+Wait 30
+
+// helix
+Turn { AngularSpeed 1 Axis (-1, -1, -1) FadeTime 10 }
+Wait 30
+
+// helix
+Turn { AngularSpeed 1 Axis (-1, 1, -1) FadeTime 10 }
+Wait 30
+
+StopTurn
+
+// pick up speed because its less noticeable that we will do a jump
+// to a new waypoint when we're going fast
+Fly     { Speed 2000000 Axis (0, 0, 1) }
+Wait 1
+Fly     { Speed 3000000 Axis (0, 0, 1) }
+Wait 1
+Fly     { Speed 4000000 Axis (0, 0, 1) }
+Wait 1
+Fly     { Speed 5000000 Axis (0, 0, 1) }
+Wait 1
+Fly     { Speed 6000000 Axis (0, 0, 1) }
+Wait 1
+Fly     { Speed 7000000 Axis (0, 0, 1) }
+Wait 1
+Fly     { Speed 8000000 Axis (0, 0, 1) }
+Wait 1
+Fly     { Speed 9000000 Axis (0, 0, 1) }
+Wait 1
+
+Fly     { Speed 10000000 Axis (0, 0, 1) }
+Wait 10
+Break

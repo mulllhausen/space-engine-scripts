@@ -1,0 +1,26 @@
+Date    "3000"
+StopTime
+Hide    Labels
+
+Set MotionBlurLength 10.0
+
+GotoLocation	"just after black hole"
+{
+	Ver		991
+	Body	"RG 0-8-6424056-651"
+	Parent	""
+	Date	"3000.01.01 00:20:27.14"
+	Time	+2AFB1383A2CF326A864D075DE0
+	Pos		(+BA9F60FC7DE2AD4D799548EB674F -4AE960D5974A2DEA899B5ADFCA52 +1A49614971068DC3063EE1E4D899)
+	Rot		(0.1863348752662957 -0.1157556193317822 -0.3941344076270666 0.8924897868194744)
+	Vel		1e+08
+	Stereobase	1
+	BindMode	1
+	PhotoMode	0
+	Exposure	0
+}
+
+// irregular blue galaxy
+Select "RG 0-8-6424056-651"
+
+Goto { Time 100 }
