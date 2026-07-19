@@ -1,0 +1,131 @@
+// 42:00 ~ 1:00:00
+// 650 x 2 = 1300 seconds = 22 minutes
+Date    "3000"
+StopTime
+Hide    Labels
+
+GotoLocation	"end of angel"
+{
+	Ver		991
+	Body	"RSC 8514-16-0-0-428"
+	Parent	""
+	Date	"2017.01.08 23:01:50.62"
+	Time	+2580A275A93E88E8564EE6A054
+	Pos		(+4559C0F977D95C751F80E773 -B664F6A821F411D3F7E66631 +67555993C6B8A993A656D32)
+	Rot		(0.6785119786192476 -0.6938844870755417 -0.2094253219872757 0.1195276034087185)
+	Vel		7943282.5
+	Stereobase	1
+	BindMode	1
+	PhotoMode	0
+	Exposure	0
+}
+//Break
+
+// barycentre
+Select "RSC 8514-16-0-0-428"
+
+// 01 keep the star in the centre of view moving directly to our right
+Orbit { Axis (0,0,1) AngularSpeed 10 FadeTime 10 }
+Wait 50
+
+//Break
+
+// 02 increase our distance from the stars we are orbiting
+Fly { Speed 0.0001 Axis (0,0,-1) Time 10 }
+Wait 50
+
+// 03
+Orbit { Axis (0,0,1) AngularSpeed 5 FadeTime 10 }
+Fly { Speed 0.001 Axis (0,0,-1) Time 10 }
+Wait 50
+
+// 04
+Orbit { Axis (0,0,1) AngularSpeed 2 FadeTime 10 }
+Fly { Speed 0.005 Axis (0,0,-1) Time 10 }
+Wait 50
+
+// 05
+Orbit { Axis (0,0,1) AngularSpeed 1 FadeTime 10 }
+Fly { Speed 0.01 Axis (0,0,-1) Time 10 }
+Wait 50
+
+// 06
+Fly { Speed 0.05 Axis (0,0,-1) Time 10 }
+Wait 50
+
+// 07
+Fly { Speed 0.1 Axis (0,0,-1) Time 10 }
+Wait 50
+
+// 08
+Fly { Speed 0.5 Axis (0,0,-1) Time 10 }
+Wait 100
+
+// 09
+Orbit { Axis (0,0,1) AngularSpeed 5 FadeTime 10 }
+Fly { Speed 1 Axis (0,0,-1) Time 10 }
+Wait 100
+
+// 10
+Fly { Speed 5 Axis (0,0,-1) Time 10 }
+Wait 100
+
+// 11 that's far enough
+Fly { Speed 0 Axis (0,0,-1) Time 10 }
+Wait 15
+
+// now fly back in
+
+// -10
+Fly { Speed 5 Axis (0,0,1) Time 10 }
+Wait 100
+
+// -09
+//Orbit { Axis (0,0,1) AngularSpeed 5 FadeTime 10 }
+Fly { Speed 1 Axis (0,0,1) Time 10 }
+Wait 100
+
+// 08
+Fly { Speed 1 Axis (0,0,1) Time 10 }
+Wait 100
+
+// 07
+Fly { Speed 0.1 Axis (0,0,1) Time 10 }
+Wait 50
+
+// -06
+Fly { Speed 0.05 Axis (0,0,1) Time 10 }
+Wait 50
+
+// -05
+Orbit { Axis (0,0,1) AngularSpeed 1 FadeTime 10 }
+Fly { Speed 0.01 Axis (0,0,1) Time 10 }
+Wait 50
+
+// -04
+Orbit { Axis (0,0,1) AngularSpeed 2 FadeTime 10 }
+Fly { Speed 0.005 Axis (0,0,1) Time 10 }
+Wait 50
+
+// -03
+Orbit { Axis (0,0,1) AngularSpeed 5 FadeTime 10 }
+Fly { Speed 0.001 Axis (0,0,1) Time 10 }
+Wait 50
+
+// -02
+Fly { Speed 0.0001 Axis (0,0,1) Time 10 }
+Wait 50
+
+// -01
+Orbit { Axis (0,0,1) AngularSpeed 10 FadeTime 10 }
+Wait 50
+
+// stop orbiting and stop moving
+Orbit { Axis (0,0,1) AngularSpeed 0 FadeTime 10 }
+Fly { Speed 0 Axis (0,0,1) Time 0 }
+Wait 10
+
+Center { Time 10 }
+Wait 10
+
+Break
