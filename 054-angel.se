@@ -25,8 +25,8 @@ GotoLocation	"angel nebula"
 Select "RN 8513-942"
 
 // fly into the center
-Goto { Time 3.0 DistKm 1 }
-Wait 3
+Goto { Time 100 DistKm 1 }
+Wait 100
 
 Fly     { SpeedKm 1000 Axis (0, 0, 1) }
 Wait 1
@@ -41,64 +41,82 @@ Wait 1
 
 // a binary red giant in the center of our current field of view
 Select "RS 8513-507-3-361-938"
-Goto { Time 3 DistRad 5000 }
-Wait 3
+Goto { Time 100 DistRad 5000 }
+Wait 50 // half way
 
-// the "angel nebula" again
-Select "RN 8513-942"
-
-Center { Time 5 }
-Wait 5
-
-// keep looking at it for a while now
+// look back at the "angel nebula" again
+// and keep looking at it for a while now
 Select "RN 8513-942"
 Track
 
+Wait 50
+
 // a star outside the nebula on the left side
 Select "RS 8513-507-3-361-627"
-Goto { Time 3 DistRad 50 }
-Wait 3
+Goto { Time 100 DistRad 50 }
+Wait 100
 
 // another star outside the nebula on the left side
 Select "RS 8513-507-5-23141-419"
-Goto { Time 3 DistRad 5000 }
-Wait 3
+Goto { Time 100 DistRad 5000 }
+Wait 100
 
 // another star outside the nebula on the left side
 // fly between the binary stars
 Select "RS 8513-507-7-1495119-629"
-Goto { Time 3 DistRad 50 }
-Wait 3
+Goto { Time 100 DistRad 50 }
+Wait 100
 
 // fly between the binary stars
 Select "RS 8513-507-5-23417-872"
-Goto { Time 3 DistRad 50 }
-Wait 3
+Goto { Time 100 DistRad 50 }
+Wait 100
 
 // star with a solar system
 Select "RS 8513-507-7-1496838-1194"
-Goto { Time 3 DistRad 500 }
-Wait 3
+Goto { Time 100 DistRad 500 }
+Wait 100
 
 // star outside
 Select "RS 8513-507-7-1482070-842"
-Goto { Time 3 }
-Wait 3
+Goto { Time 100 }
+Wait 100
+
+Untrack
 
 // star at the "right" side "base" of the nebula
 Select "RS 8513-507-7-1495244-585"
-Center { Time 3 }
-Wait 3
+Center { Time 10 }
+Wait 10
 Track
-Goto { Time 3 }
-Wait 3
+Goto { Time 100 }
+Wait 100
+
+Untrack
 
 //Select "Large Magellanic Cloud"
 Select "RSC 8514-16-0-0-428"
-Center { Time 3 }
-Wait 3
+Center { Time 10 }
+Wait 10
 Track
-Goto { Time 3 }
-Wait 3
+Goto { Time 100 }
+Wait 100
 
 Break
+
+
+GotoLocation	"end of angel"
+{
+	Ver		991
+	Body	"RSC 8514-16-0-0-428"
+	Parent	""
+	Date	"2017.01.08 23:01:50.62"
+	Time	+2580A275A93E88E8564EE6A054
+	Pos		(+4559C0F977D95C751F80E773 -B664F6A821F411D3F7E66631 +67555993C6B8A993A656D32)
+	Rot		(0.6785119786192476 -0.6938844870755417 -0.2094253219872757 0.1195276034087185)
+	Vel		7943282.5
+	Stereobase	1
+	BindMode	1
+	PhotoMode	0
+	Exposure	0
+}
