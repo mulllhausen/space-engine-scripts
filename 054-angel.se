@@ -1,0 +1,104 @@
+// start 29:20, end 40:00
+
+Date    "3000"
+StopTime
+Hide    Labels
+
+Set MotionBlurLength 0.0
+
+GotoLocation	"angel nebula"
+{
+	Ver		991
+	Body	"RN 8513-942"
+	Parent	"Milky Way"
+	Date	"2017.01.08 22:56:25.28"
+	Time	+2580A274B276DED3CF250FF1B4
+	Pos		(-F73577BD8DB6DFDDFEEA861 -DD268AFCB4CD89C610235B0 -3241B3CE5F4412D541CCD4D)
+	Rot		(-0.03279523229486919 0.1438121379894226 0.7602017992532174 0.6327209227754427)
+	Vel		7943282.5
+	Stereobase	1
+	BindMode	1
+	PhotoMode	0
+	Exposure	0
+}
+// the "angel nebula"
+Select "RN 8513-942"
+
+// fly into the center
+Goto { Time 3.0 DistKm 1 }
+Wait 3
+
+Fly     { SpeedKm 1000 Axis (0, 0, 1) }
+Wait 1
+
+// barrell roll anticlockwise and pitch up
+Turn { AngularSpeed 10 Axis (0.5, 0, 1) FadeTime 10 }
+Wait 20
+
+// note: we cannot use StopTurn here - it prevents Fly from working later
+Turn { AngularSpeed 0 Axis (0.5, 0, 1) FadeTime 1 }
+Wait 1
+
+// a binary red giant in the center of our current field of view
+Select "RS 8513-507-3-361-938"
+Goto { Time 3 DistRad 5000 }
+Wait 3
+
+// the "angel nebula" again
+Select "RN 8513-942"
+
+Center { Time 5 }
+Wait 5
+
+// keep looking at it for a while now
+Select "RN 8513-942"
+Track
+
+// a star outside the nebula on the left side
+Select "RS 8513-507-3-361-627"
+Goto { Time 3 DistRad 50 }
+Wait 3
+
+// another star outside the nebula on the left side
+Select "RS 8513-507-5-23141-419"
+Goto { Time 3 DistRad 5000 }
+Wait 3
+
+// another star outside the nebula on the left side
+// fly between the binary stars
+Select "RS 8513-507-7-1495119-629"
+Goto { Time 3 DistRad 50 }
+Wait 3
+
+// fly between the binary stars
+Select "RS 8513-507-5-23417-872"
+Goto { Time 3 DistRad 50 }
+Wait 3
+
+// star with a solar system
+Select "RS 8513-507-7-1496838-1194"
+Goto { Time 3 DistRad 500 }
+Wait 3
+
+// star outside
+Select "RS 8513-507-7-1482070-842"
+Goto { Time 3 }
+Wait 3
+
+// star at the "right" side "base" of the nebula
+Select "RS 8513-507-7-1495244-585"
+Center { Time 3 }
+Wait 3
+Track
+Goto { Time 3 }
+Wait 3
+
+//Select "Large Magellanic Cloud"
+Select "RSC 8514-16-0-0-428"
+Center { Time 3 }
+Wait 3
+Track
+Goto { Time 3 }
+Wait 3
+
+Break

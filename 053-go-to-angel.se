@@ -26,7 +26,23 @@ GotoLocation	"going to angel"
 // "angel" nebula
 Select "RN 8513-942"
 
-Goto { Time 100 }
-Wait 100
+Goto { Time 200 }
+Wait 200
 
 Break
+
+GotoLocation	"angel nebula"
+{
+	Ver		991
+	Body	"RN 8513-942"
+	Parent	"Milky Way"
+	Date	"2017.01.08 22:56:25.28"
+	Time	+2580A274B276DED3CF250FF1B4
+	Pos		(-F73577BD8DB6DFDDFEEA861 -DD268AFCB4CD89C610235B0 -3241B3CE5F4412D541CCD4D)
+	Rot		(-0.03279523229486919 0.1438121379894226 0.7602017992532174 0.6327209227754427)
+	Vel		7943282.5
+	Stereobase	1
+	BindMode	1
+	PhotoMode	0
+	Exposure	0
+}
