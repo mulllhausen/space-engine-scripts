@@ -1,5 +1,7 @@
 // 42:00 ~ 1:00:00
 // 650 x 2 = 1300 seconds = 22 minutes
+// stopped early at 11:50 = 710
+
 Date    "3000"
 StopTime
 Hide    Labels
@@ -66,24 +68,46 @@ Orbit { Axis (0,0,1) AngularSpeed 5 FadeTime 10 }
 Fly { Speed 1 Axis (0,0,-1) Time 10 }
 Wait 100
 
-// 10
+// 10 (650)
 Fly { Speed 5 Axis (0,0,-1) Time 10 }
 Wait 100
 
-// 11 that's far enough
+// 11 that's far enough (665)
 Fly { Speed 0 Axis (0,0,-1) Time 10 }
 Wait 15
 
-// now fly back in
+// i had originally planned to fly back in
+// but the flightpath malfunctioned so i chopped the video at 710
 
-// -10
+// -10 (710)
 Fly { Speed 5 Axis (0,0,1) Time 10 }
-Wait 100
+Wait 45
+//Wait 100 // original - defunct
+Break
+
+GotoLocation	"end of clanger"
+{
+	Ver		991
+	Body	"RSC 8514-16-0-0-428"
+	Parent	""
+	Date	"2017.01.08 23:03:12.01"
+	Time	+2580A275E6FA7CCE5930AB7B84
+	Pos		(+44AFBEB7D65697FC181FD275 -B4D1838AE0507647040FD6CF +65F1F5B2242E22DD4F9DC54)
+	Rot		(0.6821538900144994 -0.7005465080702499 -0.1859280423285812 0.096599293188548)
+	Vel		7943282.5
+	Stereobase	1
+	BindMode	1
+	PhotoMode	0
+	Exposure	0
+}
+
+
 
 // -09
 //Orbit { Axis (0,0,1) AngularSpeed 5 FadeTime 10 }
 Fly { Speed 1 Axis (0,0,1) Time 10 }
 Wait 100
+Break
 
 // 08
 Fly { Speed 1 Axis (0,0,1) Time 10 }

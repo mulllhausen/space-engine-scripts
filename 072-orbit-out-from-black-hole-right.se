@@ -1,0 +1,69 @@
+Hide    Labels
+
+GotoLocation	" black hole closeup"
+{
+	Ver		991
+	Body	"RSC 8513-3962-0-0-0 S*"
+	Parent	"RSC 8513-3962-0-0-0"
+	Date	"2021.07.25 23:43:40.82"
+	Time	+25871D7D19471DBC52857E3110
+	Pos		(-704D0599D367F1CDA4D64A7 -3D6810592A238061872CEF1 -323D50A7657F880D78C33DB)
+	Rot		(0.7076936057942939 0.05095614471715355 0.6691742899316681 0.2208596869686338)
+	Vel		6.1859757e-09
+	Stereobase	1
+	BindMode	1
+	PhotoMode	2
+	Exposure	0
+}
+StartTime
+TimeScale 1
+
+// 1
+Fly { SpeedKm 1000000 Axis (0,0,-1) Time 10 }
+Orbit { Axis (0,1,0) AngularSpeed 5 FadeTime 10 }
+Wait 15
+Break
+
+// 2
+Fly { SpeedKm 10000000 Axis (0,0,-1) Time 10 }
+//Orbit { Axis (0,1,0) AngularSpeed 4 FadeTime 10 }
+Wait 5
+
+// 3
+Fly { SpeedKm 100000000 Axis (0,0,-1) Time 10 }
+//Orbit { Axis (0,1,0) AngularSpeed 3 FadeTime 10 }
+Wait 15
+
+// 4
+Fly { SpeedKm 1000000000 Axis (0,0,-1) Time 10 }
+//Orbit { Axis (0,1,0) AngularSpeed 2 FadeTime 10 }
+Wait 15
+
+// 5
+Fly { SpeedKm 10000000000 Axis (0,0,-1) Time 10 }
+Wait 15
+
+// 6
+Fly { SpeedKm 100000000000 Axis (0,0,-1) Time 10 }
+Orbit { Axis (0,1,0) AngularSpeed 3 FadeTime 10 }
+Wait 15
+
+// 7
+Fly { SpeedKm 1000000000000 Axis (0,0,-1) Time 10 }
+Orbit { Axis (0,1,0) AngularSpeed 4 FadeTime 10 }
+Wait 15
+
+// 8
+Fly { Speed 1 Axis (0,0,-1) Time 10 }
+Orbit { Axis (0,1,0) AngularSpeed 5 FadeTime 10 }
+Wait 15
+
+// 9
+Fly { Speed 5 Axis (0,0,-1) Time 10 }
+Orbit { Axis (0,1,0) AngularSpeed 10 FadeTime 10 }
+Wait 15
+
+Fly { SpeedKm 0 Axis (0,0,-1) Time 10 }
+Wait 1
+
+Break

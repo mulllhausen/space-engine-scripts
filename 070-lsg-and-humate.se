@@ -1,0 +1,58 @@
+// start 47:48
+
+Date    "3000"
+StartTime
+TimeScale 1
+Hide    Labels
+
+GotoLocation	"end of clanger"
+{
+	Ver		991
+	Body	"RSC 8514-16-0-0-428"
+	Parent	""
+	Date	"2017.01.08 23:03:12.01"
+	Time	+2580A275E6FA7CCE5930AB7B84
+	Pos		(+44AFBEB7D65697FC181FD275 -B4D1838AE0507647040FD6CF +65F1F5B2242E22DD4F9DC54)
+	Rot		(0.6821538900144994 -0.7005465080702499 -0.1859280423285812 0.096599293188548)
+	Vel		7943282.5
+	Stereobase	1
+	BindMode	1
+	PhotoMode	0
+	Exposure	0
+}
+//Break
+Wait 2
+
+// turn "right" towards the dark
+Select "RG 0-6-60854-818"
+Center { Time 5 }
+Wait 5
+
+GotoLocation	" black hole closeup"
+{
+	Ver		991
+	Body	"RSC 8513-3962-0-0-0 S*"
+	Parent	"RSC 8513-3962-0-0-0"
+	Date	"2021.07.25 23:43:40.82"
+	Time	+25871D7D19471DBC52857E3110
+	Pos		(-704D0599D367F1CDA4D64A7 -3D6810592A238061872CEF1 -323D50A7657F880D78C33DB)
+	Rot		(0.7076936057942939 0.05095614471715355 0.6691742899316681 0.2208596869686338)
+	Vel		6.1859757e-09
+	Stereobase	1
+	BindMode	1
+	PhotoMode	2
+	Exposure	0
+}
+StartTime
+TimeScale 1
+
+Turn { AngularSpeed 90 Axis (0,1,0) FadeTime 0 }
+Wait 1
+Turn { AngularSpeed 0 Axis (0,1,0) }
+Wait 1
+Center { Time 1 }
+
+// look at the black hole for a while 48:45 - 49:40
+Wait 60
+
+Break
