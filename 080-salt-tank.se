@@ -1,119 +1,42 @@
-// start 47:48
+// start 1:03:00
 
-Date    "3000"
 StopTime
 Hide    Labels
 
-GotoLocation	"end of clanger"
-{
-	Ver		991
-	Body	"RSC 8514-16-0-0-428"
-	Parent	""
-	Date	"2017.01.08 23:03:12.01"
-	Time	+2580A275E6FA7CCE5930AB7B84
-	Pos		(+44AFBEB7D65697FC181FD275 -B4D1838AE0507647040FD6CF +65F1F5B2242E22DD4F9DC54)
-	Rot		(0.6821538900144994 -0.7005465080702499 -0.1859280423285812 0.096599293188548)
-	Vel		7943282.5
-	Stereobase	1
-	BindMode	1
-	PhotoMode	0
-	Exposure	0
-}
-//Break
-
-// frigid subneptune in the Triangulum galaxy (near milky way)
-//Select "RS 1238-338-7-599186-3734 1"
-
-// turn "right" towards the dark
-Select "RG 0-6-60854-818"
-Center { Time 5 }
-Wait 5
-//Goto { Time 10 DistRad 10 }
-//Wait 10
-//Break
-
-GotoLocation	" black hole closeup"
+GotoLocation	"end of humate oliver lieb"
 {
 	Ver		991
 	Body	"RSC 8513-3962-0-0-0 S*"
 	Parent	"RSC 8513-3962-0-0-0"
-	Date	"2021.07.25 23:43:40.82"
-	Time	+25871D7D19471DBC52857E3110
-	Pos		(-704D0599D367F1CDA4D64A7 -3D6810592A238061872CEF1 -323D50A7657F880D78C33DB)
-	Rot		(0.7076936057942939 0.05095614471715355 0.6691742899316681 0.2208596869686338)
+	Date	"2021.07.25 23:50:33.48"
+	Time	+25871D7E524AA5083991961BE0
+	Pos		(-704D0599F7394F9B1D955C6 -3D681059115D6CF6DC0CEA5 -323D50A7933A7602A3D1869)
+	Rot		(-0.3204323548086539 0.02745895785821871 -0.1236974578271989 0.9387587818775438)
 	Vel		6.1859757e-09
 	Stereobase	1
 	BindMode	1
 	PhotoMode	2
 	Exposure	0
 }
-Turn { AngularSpeed 90 Axis (0,1,0) FadeTime 0 }
-Wait 1
-Turn { AngularSpeed 0 Axis (0,1,0) }
-Wait 1
-Center { Time 1 }
-Wait 2
-Break
 
+// a dense galaxy - go through this slowly for a
+// shooting-star effect
+Select "M 87"
 
-
-//Select	"Intermediate-mass Black Hole"
-GotoLocation	"cluster outside black hole"
-{
-	Ver		991
-	Body	"RSC 8513-3962-0-0-0 S*"
-	Parent	"RSC 8513-3962-0-0-0"
-	Date	"2021.07.25 23:41:48.69"
-	Time	+25871D7CC43A41EB9B2D08D360
-	Pos		(-6BC6586B04088BABF287784 -3C5D09424D1EA5409F860F1 -31C6C1274A9B8D8C8AE94D3)
-	Rot		(0.707693605794294 0.05095614471715356 0.6691742899316682 0.2208596869686339)
-	Vel		19.561773
-	Stereobase	1
-	BindMode	1
-	PhotoMode	2
-	Exposure	0
-}
-Break
-
-
-
-
-// cluster
-Select "M 4"
-Goto { Time 10 Dist 1 }
-
-// "Intermediate-mass Black Hole"
-//Select "RSC 8513-3962-0-0-0 S*"
-Select "RSC 8513-3962-0-0-0"
-//Center { Time 10 }
-//Wait 10
-Goto { Time 10 DistKm 4000000 }
-Wait 10
-Break
-
-Fly { SpeedKm 2000 Axis (-1,0,0) Time 10 }
-
-Orbit { Axis (0,1,0) AngularSpeed 5 FadeTime 10 }
-Turn { AngularSpeed 1.0 Axis (0,1,0) }
-Wait 19
-
-// stop turning and flying
-Turn { AngularSpeed 0 Axis (0,1,0) }
-Fly { SpeedKm 0 Axis (-1,0,0) Time 10 }
-Wait 10
-
-Fly { SpeedKm 5000 Axis (0,0,1) Time 10 }
-Wait 50
-
-Break
-
-Select "NGC 247"
-Center { Time 3 }
 Wait 3
-Goto { Time 10 }
-Wait 10
+//Break
 
+// but first, leave the cluster we are in, slowly
+
+Fly { SpeedKm 500000000000 Axis (0,0,1) Time 10 }
+Wait 20
+Fly { SpeedKm 1000000000000 Axis (0,0,1) Time 10 }
+Wait 20
+Fly { Speed 0.1 Axis (0,0,1) Time 10 }
+Wait 20
+Fly { Speed 1 Axis (0,0,1) Time 10 }
+Wait 20
+
+// now we're in the void of space - mostly black all around
+// should be easy to fade out and fade back in a few million ly on
 Break
-
-// nice cluster for salt tank
-// RC 1238-16

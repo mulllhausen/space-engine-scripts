@@ -1,0 +1,65 @@
+// oliver lieb remix of humate - raw and desolate
+// start at 56:20, end at 1:03:00 = 6:40 mins = 400 sec
+// orbit the black hole nice and slow because its amazing
+// the way the light flows around it!
+
+Hide    Labels
+
+GotoLocation	" black hole closeup"
+{
+	Ver		991
+	Body	"RSC 8513-3962-0-0-0 S*"
+	Parent	"RSC 8513-3962-0-0-0"
+	Date	"2021.07.25 23:43:40.82"
+	Time	+25871D7D19471DBC52857E3110
+	Pos		(-704D0599D367F1CDA4D64A7 -3D6810592A238061872CEF1 -323D50A7657F880D78C33DB)
+	Rot		(0.7076936057942939 0.05095614471715355 0.6691742899316681 0.2208596869686338)
+	Vel		6.1859757e-09
+	Stereobase	1
+	BindMode	1
+	PhotoMode	2
+	Exposure	0
+}
+//Break
+
+StartTime
+TimeScale 1
+
+Select "RSC 8513-3962-0-0-0 S*"
+Center { Time 30 }
+Wait 30
+
+Orbit { Axis (1,0,0) AngularSpeed 5 FadeTime 30 }
+Wait 120
+
+Orbit { Axis (0,0,-1) AngularSpeed 5 FadeTime 30 }
+Wait 120
+
+Orbit { Axis (1,0,-1) AngularSpeed 5 FadeTime 30 }
+Wait 100
+
+Orbit { Axis (1,0,-1) AngularSpeed 0 FadeTime 20 }
+Wait 20
+
+Select "M 87"
+Center { Time 10 }
+Wait 10
+
+Break
+
+GotoLocation	"end of humate oliver lieb"
+{
+	Ver		991
+	Body	"RSC 8513-3962-0-0-0 S*"
+	Parent	"RSC 8513-3962-0-0-0"
+	Date	"2021.07.25 23:50:33.48"
+	Time	+25871D7E524AA5083991961BE0
+	Pos		(-704D0599F7394F9B1D955C6 -3D681059115D6CF6DC0CEA5 -323D50A7933A7602A3D1869)
+	Rot		(-0.3204323548086539 0.02745895785821871 -0.1236974578271989 0.9387587818775438)
+	Vel		6.1859757e-09
+	Stereobase	1
+	BindMode	1
+	PhotoMode	2
+	Exposure	0
+}
+

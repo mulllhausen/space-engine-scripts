@@ -1,0 +1,38 @@
+// start 1:03:00
+
+Date    "3000"
+StopTime
+Hide    Labels
+
+GotoLocation	"black void after humate"
+{
+	Ver		991
+	Body	"RSC 8513-3962-0-0-0 S*"
+	Parent	"RSC 8513-3962-0-0-0"
+	Date	"2021.07.25 23:51:29.90"
+	Time	+25871D7E7D1523655AB600D230
+	Pos		(-7060FF596C12286037568C3 -3D474A553EC2FDE970F360C -32D1191C1A6197E40A80E58)
+	Rot		(-0.3204323548086539 0.02745895785821871 -0.1236974578271989 0.9387587818775438)
+	Vel		0.98041111
+	Stereobase	1
+	BindMode	1
+	PhotoMode	2
+	Exposure	0
+}
+
+// a dense galaxy - go through this slowly for a shooting-star effect
+Select "M 87"
+
+Fly { Speed 100000 Axis (0,0,1) Time 10 }
+Wait 20
+
+// try to time the appearance of the light of all the distant stars with
+// 1:06:46
+
+Select "RSC 5803-1779-0-0-10"
+
+Goto { Time 20 }
+Wait 20
+
+Break
+
